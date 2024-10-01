@@ -390,9 +390,9 @@ function createApp(elements, options) {
         });
       }
     },
-  }).use(Quasar, {
-    config: options.quasarConfig,
-  }));
+  })
+
+  );
 }
 
 // HACK: remove Quasar's rules for divs in QCard (#2265, #2301)

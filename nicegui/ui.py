@@ -122,6 +122,14 @@ __all__ = [
     'right_drawer',
     'run',
     'run_with',
+
+    'buttonVfy',
+    'buttonPri',
+    'buttonNve',
+
+    'datePri',
+    'dateNve',
+    'dateVfy',
 ]
 
 from .context import context
@@ -222,6 +230,15 @@ from .elements.tooltip import Tooltip as tooltip
 from .elements.tree import Tree as tree
 from .elements.upload import Upload as upload
 from .elements.video import Video as video
+
+from .elements.naive.button import ButtonNve as buttonNve
+from .elements.vuetify.button import ButtonVfy as buttonVfy
+from .elements.prime_vue.button import ButtonPri as buttonPri
+
+from .elements.prime_vue.date import DatePri as datePri
+from .elements.naive.date import DateNve as dateNve
+from .elements.vuetify.date import DateVfy as dateVfy
+
 from .functions import clipboard
 from .functions.download import download
 from .functions.html import add_body_html, add_head_html
