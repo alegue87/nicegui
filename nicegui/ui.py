@@ -126,10 +126,15 @@ __all__ = [
     'buttonVfy',
     'buttonPri',
     'buttonNve',
+    'buttonEle',
+    'buttonAnt',
 
     'datePri',
     'dateNve',
     'dateVfy',
+    'dateEle',
+    'dateAnt',
+
 ]
 
 from .context import context
@@ -234,10 +239,16 @@ from .elements.video import Video as video
 from .elements.naive.button import ButtonNve as buttonNve
 from .elements.vuetify.button import ButtonVfy as buttonVfy
 from .elements.prime_vue.button import ButtonPri as buttonPri
+from .elements.element.button import ButtonEle as buttonEle
+from .elements.ant.button import ButtonAnt as buttonAnt
 
 from .elements.prime_vue.date import DatePri as datePri
 from .elements.naive.date import DateNve as dateNve
 from .elements.vuetify.date import DateVfy as dateVfy
+from .elements.element.date import DateEle as dateEle
+from .elements.ant.date import DateAnt as dateAnt
+
+
 
 from .functions import clipboard
 from .functions.download import download

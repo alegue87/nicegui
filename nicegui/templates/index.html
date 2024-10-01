@@ -14,12 +14,20 @@
     <!-- Vuetify icons default -->
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
 
+    <link href="{{ prefix | safe }}/_nicegui/{{version}}/static/element.min.css" rel="stylesheet">
+    <link href="{{ prefix | safe }}/_nicegui/{{version}}/static/antd.min.css" rel="stylesheet" type="text/css" />
+
+
     {% else %}
     <link href="{{ prefix | safe }}/_nicegui/{{version}}/static/quasar.css" rel="stylesheet" type="text/css" />
 
     <link href="{{ prefix | safe }}/_nicegui/{{version}}/static/vuetify.min.css" rel="stylesheet" type="text/css" />
     <!-- Vuetify icons default -->
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+
+    <link href="{{ prefix | safe }}/_nicegui/{{version}}/static/element.min.css" rel="stylesheet">
+    <link href="{{ prefix | safe }}/_nicegui/{{version}}/static/antd.min.css" rel="stylesheet" type="text/css" />
+
 
     {% endif %}
     <!-- prevent Prettier from removing this line -->
@@ -43,6 +51,18 @@
     <script src="{{ prefix | safe }}/_nicegui/{{version}}/static/aura.min.js"></script>
     <script src="{{ prefix | safe }}/_nicegui/{{version}}/static/vuetify.min.js"></script>
     <script src="{{ prefix | safe }}/_nicegui/{{version}}/static/naive-ui.js"></script>
+    <script src="{{ prefix | safe }}/_nicegui/{{version}}/static/element.full.min.js"></script>
+    <script type="module" src="{{ prefix | safe }}/_nicegui/{{version}}/static/antd.min.js"></script>
+    <script src="https://unpkg.com/dayjs/dayjs.min.js"></script>
+    <script src="https://unpkg.com/dayjs/plugin/customParseFormat.js"></script>
+    <script src="https://unpkg.com/dayjs/plugin/weekday.js"></script>
+    <script src="https://unpkg.com/dayjs/plugin/localeData.js"></script>
+    <script src="https://unpkg.com/dayjs/plugin/weekOfYear.js"></script>
+    <script src="https://unpkg.com/dayjs/plugin/weekYear.js"></script>
+    <script src="https://unpkg.com/dayjs/plugin/advancedFormat.js"></script>
+    <script src="https://unpkg.com/dayjs/plugin/quarterOfYear.js"></script>
+
+
     {% else %}
     <script src="{{ prefix | safe }}/_nicegui/{{version}}/static/vue.global.js"></script>
     <script src="{{ prefix | safe }}/_nicegui/{{version}}/static/quasar.umd.js"></script>
@@ -51,6 +71,10 @@
     <script src="{{ prefix | safe }}/_nicegui/{{version}}/static/aura.min.js"></script>
     <script src="{{ prefix | safe }}/_nicegui/{{version}}/static/vuetify.min.js"></script>
     <script src="{{ prefix | safe }}/_nicegui/{{version}}/static/naive-ui.js"></script>
+    <script src="{{ prefix | safe }}/_nicegui/{{version}}/static/element.full.min.js"></script>
+    <scriptv type="module" src="{{ prefix | safe }}/_nicegui/{{version}}/static/antd.min.js"></script>
+
+
     {% endif %}
     <script src="{{ prefix | safe }}/_nicegui/{{version}}/static/nicegui.js"></script>
 
@@ -78,6 +102,8 @@
       app.use(Quasar, {config: {{ quasar_config | safe }}})
         .use(naive)
         .use(Vuetify.createVuetify())
+        .use(ElementPlus)
+        .use(antd)
         .use(PrimeVue.Config, { theme: { preset: PrimeVue.Themes.Aura } } )
         .component('p-button', PrimeVue.Button)
         .component('p-date', PrimeVue.DatePicker)

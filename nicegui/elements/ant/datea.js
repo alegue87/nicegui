@@ -1,26 +1,26 @@
 export default {
   template: `
-    <n-date-picker
+    <a-date-picker
       ref="qRef"
       v-bind="$attrs"
       v-model:value="inputValue"
-      :value-format='valueFormat'
       :format='format'
+      :valueFormat='valueFormat'
     >
       <template v-for="(_, slot) in $slots" v-slot:[slot]="slotProps">
         <slot :name="slot" v-bind="slotProps || {}" />
       </template>
-    </n-date-picker>
+    </a-date-picker>
   `,
   props: {
     value: String,
-    valueFormat: String,
-    format: String
+    format: String,
+    valueFormat: String
   },
   data() {
     
     return {
-      inputValue: dateFns.parse(this.value, this.valueFormat, new Date()),
+      inputValue: dayjs(this.value, this.valueFormat) ,
     };
   },
   watch: {
@@ -28,12 +28,12 @@ export default {
       if(newValue == undefined)return;
       console.log('inputValue')
       console.log(newValue)
-      this.$emit("update:value",{'date': dateFns.format(newValue, this.valueFormat)});
+      this.$emit("update:value", {'date': newValue });
     },
   },
   methods: {
     updateValue() {
       this.inputValue = this.value;
-    },
-  },
+    }
+  }
 };
