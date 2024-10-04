@@ -10,3 +10,4 @@ venv
 .nicegui/
 *.sqlite*
 .DS_Store
+examples/multi_ui/test_multi_ui

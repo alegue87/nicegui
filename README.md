@@ -3,38 +3,82 @@
     width="200" align="right" alt="Try online!" />
 </a>
 
-# NiceGUI Multiple component suite
+[![Example](https://vimeo.com/1016297691?share=copy)](Example)
 
+# NiceGUI Multiple components suite
+
+The suite of Vue components available for usage in the develop mode ( prod_js = False ) are:
+
+- Naive UI
+  - Button
+  - Datepicker
+  - Menu
+- Vuetify
+  - Button
+  - Datepicker
+- PrimeVue
+  - Button
+  - Datepicker
+- Element
+  - Button
+  - Datepicker
+
+With production mode enabled they are individually selectionable with argument: ui_components_suite="naive" ( only implemented at the moment, the default is quasar suite ).
 
 ## Installation
 
-```bash
-python3 -m pip install nicegui
-```
+The installation in only for setup a dev environment with a python venv and the step are:
 
-## Usage
-
-Write your nice GUI in a file `main.py`:
-
-```python
-from nicegui import ui
-
-ui.label('Hello NiceGUI!')
-ui.button('BUTTON', on_click=lambda: ui.notify('button was pressed'))
-
-ui.run()
-```
-
-Launch it with:
+Clone the repository:
 
 ```bash
-python3 main.py
+git clone git@github.com:alegue87/nicegui.git
 ```
 
-The GUI is now available through http://localhost:8080/ in your browser.
+
+Enter in multi_ui example in the repository cloned:
+
+```bash
+cd nicegui/examples/multi_ui
+```
+
+Create venv with python ( maybe need python >= 3.10 )
+
+```bash
+python -m venv test_multi_ui
+```
+
+Link nicegui framework in the library folder of the venv. For example if you
+are in multi_ui folder and you use python3.10 the command is:
+
+```bash
+ln -s $PWD/../../nicegui/ test_multi_ui/lib/python3.10/site-packages/nicegui
+```
+
+Source the environment
+
+```bash
+source bin/activate
+```
+
+Install the requirement with pip ( located in example/multi_ui folder )
+
+```bash
+pip install -r requirements.txt
+```
+
+Execute the example from examples/multi_ui folder
+```bash
+python main.py
+```
+
+The GUI is now available through http://localhost:8081/ in your browser.
 Note: NiceGUI will automatically reload the page when you modify the code.
 
-## Documentation and Examples
+The component suite loaded are directly available in the code with Element('vue-tag-name') and in the future the more complex one will be wrapped in
+python like datepickers and menus. 
+
+## Original Documentation and Examples
 
 The documentation is hosted at [https://nicegui.io/documentation](https://nicegui.io/documentation) and provides plenty of live demos.
 The whole content of [https://nicegui.io](https://nicegui.io) is [implemented with NiceGUI itself](https://github.com/zauberzeug/nicegui/blob/main/main.py)
