@@ -3,7 +3,7 @@
     width="200" align="right" alt="Try online!" />
 </a>
 
-[![Example](https://vimeo.com/1016297691?share=copy)](Example)
+[![Demo video example](https://vimeo.com/1016297691?share=copy)](https://vimeo.com/1016297691?share=copy)
 
 # NiceGUI Multiple components suite
 
