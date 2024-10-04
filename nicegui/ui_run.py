@@ -48,6 +48,7 @@ def run(*,
         endpoint_documentation: Literal['none', 'internal', 'page', 'all'] = 'none',
         storage_secret: Optional[str] = None,
         show_welcome_message: bool = True,
+        ui_components_suite: bool = 'quasar',
         **kwargs: Any,
         ) -> None:
     """ui.run
@@ -95,6 +96,7 @@ def run(*,
         tailwind=tailwind,
         prod_js=prod_js,
         show_welcome_message=show_welcome_message,
+        ui_components_suite=ui_components_suite,
     )
     core.app.config.endpoint_documentation = endpoint_documentation
 

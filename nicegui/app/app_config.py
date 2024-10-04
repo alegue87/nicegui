@@ -36,6 +36,8 @@ class AppConfig:
     prod_js: bool = field(init=False)
     show_welcome_message: bool = field(init=False)
     _has_run_config: bool = False
+    ui_components_suite: str = 'quasar'
+
 
     def add_run_config(self,
                        *,
@@ -50,6 +52,7 @@ class AppConfig:
                        tailwind: bool,
                        prod_js: bool,
                        show_welcome_message: bool,
+                        ui_components_suite: str
                        ) -> None:
         """Add the run config to the app config."""
         self.reload = reload

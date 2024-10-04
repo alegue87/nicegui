@@ -65,10 +65,18 @@ class Client:
 
         self.outbox = Outbox(self)
 
-        with Element('q-layout', _client=self).props('view="hhh lpr fff"').classes('nicegui-layout') as self.layout:
-            with Element('q-page-container') as self.page_container:
-                with Element('q-page'):
-                    self.content = Element('div').classes('nicegui-content')
+        
+        if core.app.config.ui_components_suite == 'naive':
+            with Element('n-space', _client=self).props("vertical size='large'").classes('h-full') :
+                with Element('n-layout').style('height:"100vh"') as self.layout:
+                    self.content = Element('div')
+        elif core.app.config.ui_components_suite == 'quasar':
+            with Element('q-layout', _client=self).props('view="hhh lpr fff"').classes('nicegui-layout') as self.layout:
+                with Element('q-page-container') as self.page_container:
+                    with Element('q-page'):
+                        self.content = Element('div').classes('nicegui-content')
+        else:
+            raise Exception(f'ui component suite is not valid: {core.app.config.ui_components_suite}')
 
         self.title: Optional[str] = None
 

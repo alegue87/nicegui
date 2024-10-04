@@ -16,7 +16,7 @@ class ButtonNve(Element):
                  color: Optional[str] = 'primary',
                  icon: Optional[str] = None,
                  ) -> None:
-        """Button
+        """ButtonNve
 
         This element is based on Quasar's `QBtn <https://quasar.dev/vue-components/button>`_ component.
 
