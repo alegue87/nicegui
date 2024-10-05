@@ -1,9 +1,6 @@
-<a href="https://nicegui.io/#about">
-  <img src="https://raw.githubusercontent.com/zauberzeug/nicegui/main/screenshot.png"
-    width="200" align="right" alt="Try online!" />
-</a>
 
-[![Demo video example](https://vimeo.com/1016297691?share=copy)](https://vimeo.com/1016297691?share=copy)
+
+![Demo video example](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3A2NmI4bGZrY3RvenpsZjI0ZTQ3bXh5ZW96NWJpOWV2dzU3c2VydCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/71JqUzkeCP9G6dnkFd/giphy.gif)
 
 # NiceGUI Multiple components suite
 
