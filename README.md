@@ -3,7 +3,7 @@
 
 ![Demo video example](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3A2NmI4bGZrY3RvenpsZjI0ZTQ3bXh5ZW96NWJpOWV2dzU3c2VydCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/71JqUzkeCP9G6dnkFd/giphy.gif)
 
-video -> https://vimeo.com/1014704643
+video -> https://vimeo.com/1016297691
 
 The suite of Vue components available for usage in the develop mode ( prod_js = False ) are:
 
